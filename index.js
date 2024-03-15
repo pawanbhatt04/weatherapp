@@ -7,7 +7,9 @@ const app = express();
 const months = ["January", "Februar", "March", "April", "May", "June",
 "July", "August", "September", "October", "November", "December"
 ];
-const appid = process.env.app_id;
+dotenv.config();
+const appid = process.env.APP_ID;
+console.log(appid)
 let city="yamunanagar";
 app.use(express.static("public"));
 app.use(express.urlencoded({extended:true}));
