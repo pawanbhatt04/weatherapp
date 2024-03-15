@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+    <div class="gridout">
+    <div class="up">
+    <div class="search">
+    <form action="/submit" method="post">
+        <input type="text" placeholder="   Type city" name="city" value="">
+        <button type="submit" ><img  src="https://img.icons8.com/ios/50/000000/search--v1.png" alt="search--v1"/></button>
+    </form>
+    </div>
+    </div>
+    <div class="grid-container">
+        <div class="leftgrid item1">
+            <p class="place"><%=place%></p>
+            <p class="date"><%=month%> <%=date%>, <%=year%></p>
+            <p class="time"><%= hours %>:<%= minute %></p>
+        </div>
+        <div class="img">
+            
+            <img class="icon" src="http://openweathermap.org/img/w/<%=img%>.png" alt="" height="200">
+        </div>
+        <div class="temp item2">
+            <p class="tempvalue"><%=temp%><sup>o</sup> C</p>
+            <p class="status"><%=status%></p>
+                   
+        </div>
+        <div class="history item3">
+            <div class="humidity">
+                <p class="param">Humidity:</p>
+                <p class="value"><%= humidity %> %</p>
+            </div>
+            <div class="Pressure">
+                <p class="param">Pressure:</p>
+                <p class="value"><%=pressure%> hpa</p>
+            </div>
+            <div class="Visibility">
+                <p class="param">Visibility:</p>
+                <p class="value"><%= visibility %> m</p>
+            </div>
+            <div class="Wind Speed">
+                <p class="param">Wind Speed:</p>
+                <p class="value"><%= wind %> m/s</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+</body>
+</html>
